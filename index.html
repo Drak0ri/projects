@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IESV IT Projects - Baz Shaw</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .project-card.broken {
+            opacity: 0.6;
+            background: #f5f5f5;
+        }
+
+        .project-card.broken::after {
+            content: "⚠️ BROKEN";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ff4444;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.7em;
+            font-weight: bold;
+        }
+
+        .icon {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .project-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+            text-align: center;
+        }
+
+        .project-date {
+            font-size: 0.85em;
+            color: #666;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: auto;
+        }
+
+        .project-link {
+            flex: 1;
+            min-width: 100px;
+            padding: 10px 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+            transition: opacity 0.3s ease;
+        }
+
+        .project-link:hover {
+            opacity: 0.8;
+        }
+
+        .project-link.secondary {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 IESV IT Projects</h1>
+            <p>Built by Baz Shaw - IT Representative</p>
+            <p style="font-size: 0.9em; margin-top: 10px;">Internationella Engelska Skolan Västerås</p>
+        </header>
+
+        <div class="projects-grid">
+            
+            <!-- Behavior Dashboard -->
+            <div class="project-card">
+                <div class="icon">📊</div>
+                <div class="project-title">Behavior Dashboard</div>
+                <div class="project-date">30 Aug 2024</div>
+                <div class="project-links">
+                    <a href="#" class="project-link">Open Dashboard</a>
+                </div>
+            </div>
+
+            <!-- Google Classroom IT Course -->
+            <div class="project-card">
+                <div class="icon">📚</div>
+                <div class="project-title">Google Classroom IT Course</div>
+                <div class="project-date">21 Aug 2024</div>
+                <div class="project-links">
+                    <a href="#" class="project-link">View Course</a>
+                </div>
+            </div>
+
+            <!-- House Points System (Broken) -->
+            <div class="project-card broken">
+                <div class="icon">🏆</div>
+                <div class="project-title">House Points System</div>
+                <div class="project-date">23 Oct 2024</div>
+                <div class="project-links">
+                    <a href="#" class="project-link">Dashboard</a>
+                </div>
+            </div>
+
+            <!-- Staff Availability -->
+            <div class="project-card">
+                <div class="icon">👥</div>
+                <div class="project-title">Staff Availability Tracker</div>
+                <div class="project-date">22 Oct 2024</div>
+                <div class="project-links">
+                    <a href="#" class="project-link">Open Tracker</a>
+                </div>
+            </div>
+
+            <!-- Digital Signage -->
+            <div class="project-card">
+                <div class="icon">📺</div>
+                <div class="project-title">Digital Signage Project</div>
+                <div class="project-date">7 Nov 2024</div>
+                <div class="project-links">
+                    <a href="#" class="project-link">Junior Slide</a>
+                    <a href="#" class="project-link secondary">Senior Slide</a>
+                </div>
+            </div>
+
+            <!-- Now & Next -->
+            <div class="project-card">
+                <div class="icon">⏰</div>
+                <div class="project-title">Now & Next Schedule</div>
+                <div class="project-date">25 Sept 2024</div>
+                <div class="project-links">
+                    <a href="#" class="project-link">View Schedule</a>
+                </div>
+            </div>
+
+            <!-- Digital Clock -->
+            <div class="project-card">
+                <div class="icon">🕐</div>
+                <div class="project-title">Digital Clock Project</div>
+                <div class="project-date">2 Nov 2024</div>
+                <div class="project-links">
+                    <a href="#" class="project-link">Open Clock</a>
+                </div>
+            </div>
+
+            <!-- Lunch Display -->
+            <div class="project-card">
+                <div class="icon">🍽️</div>
+                <div class="project-title">Lunch Display Signage</div>
+                <div class="project-date">10 Nov 2024</div>
+                <div class="project-links">
+                    <a href="#" class="project-link">View Menu</a>
+                </div>
+            </div>
+
+            <!-- Lateness Tracker -->
+            <div class="project-card">
+                <div class="icon">⏱️</div>
+                <div class="project-title">Lateness Tracker</div>
+                <div class="project-date">5 Nov 2024</div>
+                <div class="project-links">
+                    <a href="#" class="project-link">Open Tracker</a>
+                </div>
+            </div>
+
+            <!-- Student Attendance -->
+            <div class="project-card">
+                <div class="icon">✅</div>
+                <div class="project-title">Student Attendance Tool</div>
+                <div class="project-date">9 Oct 2024</div>
+                <div class="project-links">
+                    <a href="#" class="project-link">View Absences</a>
+                </div>
+            </div>
+
+            <!-- Staff Attendance -->
+            <div class="project-card">
+                <div class="icon">👔</div>
+                <div class="project-title">Staff Attendance (M/LOA-U)</div>
+                <div class="project-date">5 Nov 2024</div>
+                <div class="project-links">
+                    <a href="#" class="project-link">Open 2.0</a>
+                </div>
+            </div>
+
+            <!-- D45 Attendance -->
+            <div class="project-card">
+                <div class="icon">📋</div>
+                <div class="project-title">D45 Attendance Tracking</div>
+                <div class="project-date">5 Nov 2024</div>
+                <div class="project-links">
+                    <a href="#" class="project-link">Sheet</a>
+                    <a href="#" class="project-link secondary">Form</a>
+                    <a href="#" class="project-link secondary">Studio</a>
+                </div>
+            </div>
+
+            <!-- Student Absence Monthly -->
+            <div class="project-card">
+                <div class="icon">📅</div>
+                <div class="project-title">Student Absence Tracking - Monthly</div>
+                <div class="project-date">25 Oct 2024</div>
+                <div class="project-links">
+                    <a href="#" class="project-link">View Report</a>
+                </div>
+            </div>
+
+            <!-- Weekly Absence -->
+            <div class="project-card">
+                <div class="icon">📊</div>
+                <div class="project-title">Weekly Student Absence & Late</div>
+                <div class="project-date">24 Sept 2024</div>
+                <div class="project-links">
+                    <a href="#" class="project-link">View Weekly</a>
+                </div>
+            </div>
+
+            <!-- Visitor Sign In -->
+            <div class="project-card">
+                <div class="icon">🚪</div>
+                <div class="project-title">Visitor Sign In/Out Tablet</div>
+                <div class="project-date">20 Nov 2024</div>
+                <div class="project-links">
+                    <a href="#" class="project-link">Open Tablet</a>
+                </div>
+            </div>
+
+            <!-- The Lounge Sign -->
+            <div class="project-card">
+                <div class="icon">☕</div>
+                <div class="project-title">The Lounge Sign</div>
+                <div class="project-date">26 Nov 2024</div>
+                <div class="project-links">
+                    <a href="#" class="project-link">View Sign</a>
+                </div>
+            </div>
+
+            <!-- Student Landing Page -->
+            <div class="project-card">
+                <div class="icon">🎓</div>
+                <div class="project-title">IESV Student Landing Page</div>
+                <div class="project-date">9 Dec 2024</div>
+                <div class="project-links">
+                    <a href="#" class="project-link">Open Page</a>
+                </div>
+            </div>
+
+            <!-- Year 6 Break Alarm -->
+            <div class="project-card">
+                <div class="icon">🔔</div>
+                <div class="project-title">Year 6 Break End Alarm</div>
+                <div class="project-date">9 Dec 2024</div>
+                <div class="project-links">
+                    <a href="#" class="project-link">Open Alarm</a>
+                </div>
+            </div>
+
+            <!-- Junior Club RFID -->
+            <div class="project-card">
+                <div class="icon">🎯</div>
+                <div class="project-title">Junior Club - RFID Scanner</div>
+                <div class="project-date">17 Dec 2024</div>
+                <div class="project-links">
+                    <a href="#" class="project-link">Main</a>
+                    <a href="#" class="project-link secondary">Staff</a>
+                    <a href="#" class="project-link secondary">Manual</a>
+                </div>
+            </div>
+
+        </div>
+
+        <footer>
+            <p>💻 Built with passion for IESV | Last updated: January 2025</p>
+        </footer>
+    </div>
+</body>
+</html>
